@@ -1,9 +1,11 @@
+#.travis.yml
+#comment to initiate commit
 sudo: required
 
-language: node
+language: node_js
 branches:
-  except:
-  - gh-pages
+  only:
+    -dev
 services:
   - docker
 
