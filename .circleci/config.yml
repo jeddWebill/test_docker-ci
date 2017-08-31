@@ -1,8 +1,23 @@
 version: 2
 jobs:
-   build:
-     docker:
-       - image: circleci/node:latest
-     steps:
-       - checkout
-       - run: echo "hello world"
+  build:
+    working_directory: ~/Docker-Test-Services
+    docker:
+      - image: docker:17.05.0-ce-git
+     branches:
+            only:
+              - dev
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+                name: Build application Docker image
+                command: |
+                  docker build -t jedd/server .
+
+deployment:
+  hub:
+    branch: dev
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push jedd/server
