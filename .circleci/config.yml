@@ -6,4 +6,7 @@ jobs:
 
      steps:
        - checkout
-       - run: echo "hello world"
+       - run:
+            name: Build application Docker image
+            command: |
+               docker build -t app .
