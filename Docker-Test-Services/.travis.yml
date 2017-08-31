@@ -1,0 +1,14 @@
+sudo: required
+
+language: node
+branches:
+  except:
+  - gh-pages
+services:
+  - docker
+
+before_install:
+  - docker build -t jedd/server .
+after_success:
+    -docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    -docker push jeddwebill/webilldevops;
