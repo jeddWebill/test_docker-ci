@@ -1,7 +1,9 @@
 sudo: required
 
 language: node
-
+branches:
+  except:
+  - gh-pages
 services:
   - docker
 
