@@ -15,7 +15,7 @@ jobs:
        - run:
             name:  list imagesRun Test
             command: |
-                            docker run -d --name my-app app
+                            docker run -d --name my-app jeddwebill/webilldevops
                             docker exec -it my-app  curl --retry 10 --retry-connrefused http://localhost:8080
        - run:
                   name:  list Services
