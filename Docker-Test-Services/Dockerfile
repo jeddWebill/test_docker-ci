@@ -1,8 +1,8 @@
 FROM alpine:3.4
 RUN apk update && apk upgrade
 RUN apk add nodejs
+RUN apk --no-cache add curl
 RUN rm -rf /var/cache/apk/*
-RUN apk add curl
 COPY . /src
 RUN cd /src; npm install
 EXPOSE 8080
