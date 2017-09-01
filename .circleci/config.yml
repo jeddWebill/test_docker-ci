@@ -25,6 +25,7 @@ jobs:
        - deploy:
              name: Deploy Dev to docker
              command: |
-               if [ "${CIRCLE_BRANCH}" == "dev" ]; then
-                 echo "8"
+               if [ "${CIRCLE_BRANCH}" == "dev-Tests" ]; then
+                          docker login -u $DOCKER_USER -p $DOCKER_PASS
+                          docker push app
                fi
