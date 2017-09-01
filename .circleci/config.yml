@@ -14,4 +14,4 @@ jobs:
        - run:
             name: Tests
             command: |
-              bash -c "curl localhost:8080"
+              ping google.com
