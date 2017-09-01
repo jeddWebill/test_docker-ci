@@ -16,7 +16,7 @@ jobs:
             name:  list imagesRun Test
             command: |
                             docker run -d --name my-app app /bin/bash
-                            docker run -d --name my-app app /bin/bash
+
                             docker exec -it my-app  curl --retry 10 --retry-connrefused http://localhost:8080
        - run:
                   name:  list Services
