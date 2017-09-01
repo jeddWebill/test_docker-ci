@@ -12,6 +12,6 @@ jobs:
             command: |
                docker build -t app Docker-Test-Services/
        - run:
-          name: get
-          command: |
-           curl localhost:8080
+            name: Tests
+            command: |
+            bash -c "curl localhost:8080"
