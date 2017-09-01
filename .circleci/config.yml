@@ -11,6 +11,11 @@ jobs:
             name: Build application Docker image
             command: |
                docker build -t app Docker-Test-Services/
+
+       - run:
+            name:  run Services
+            command: |
+                            docker run app -p 8080:8080
        - run:
                   name:  list Services
                   command: |
