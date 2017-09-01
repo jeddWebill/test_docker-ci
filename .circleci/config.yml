@@ -16,8 +16,10 @@ jobs:
             name:  list imagesRun Test
             command: |
                             docker run -d --name my-app app node /src/server.js
-                            docker exec -it my-app  curl --retry 10 --retry-connrefused http://localhost:8080
+                            docker ps
+
        - run:
                   name:  list Services
                   command: |
-                     docker ps
+                      docker exec -it my-app  curl --retry 10 --retry-connrefused http://localhost:8080
+                      docker ps
