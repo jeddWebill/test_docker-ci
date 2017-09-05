@@ -21,7 +21,7 @@ server.route({
     method: 'GET',
     path: '/',
     handler: function (request, reply) {
-        reply('Fully  6');
+        reply('DAns dick is big');
     }
 });
 
