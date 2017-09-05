@@ -28,5 +28,5 @@ jobs:
              command: |
                if [ "${CIRCLE_BRANCH}" == "dev-Tests" ]; then
                           docker login -u $DOCKER_USER -p $DOCKER_PASS
-                          docker push jeddwebill/webilldevops
+                          docker push jeddwebill/webilldevops:latest
                fi
