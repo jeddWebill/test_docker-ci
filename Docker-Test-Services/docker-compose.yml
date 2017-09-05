@@ -1,12 +1,12 @@
 version: "3"
 services:
   web:
-    build: .
+    image: "jeddwebill/webilldevops"
     ports:
       - "8080:8080"
     links:
       - "mongo"
   mongo:
-      image: 'mongo:3.4.1'
+      image: "mongo:3.4.1"
       ports:
         - "27017:27017"
