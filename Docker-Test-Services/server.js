@@ -21,7 +21,7 @@ server.route({
     method: 'GET',
     path: '/',
     handler: function (request, reply) {
-        reply('Fully working 6');
+        reply('Fully  6');
     }
 });
 
@@ -34,4 +34,4 @@ console.log('Server running at:', server.info.uri);
 });
 /**
  * Created by User on 2017-08-16.
- */
+ working */
