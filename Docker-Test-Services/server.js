@@ -21,7 +21,7 @@ server.route({
     method: 'GET',
     path: '/',
     handler: function (request, reply) {
-        reply('Fully working 3');
+        reply('Fully working 4');
     }
 });
 
